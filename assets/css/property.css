@@ -1,0 +1,19 @@
+/* ******************************************** */
+/** PROPERTY
+/* ******************************************** */
+
+/* Objects */
+@import url(sitio/objects.grid.css);
+
+/* Components */
+@import url(sitio/components.popup.css);
+@import url(sitio/components.breadcrumb.css);
+@import url(sitio/components.property-header.css);
+@import url(sitio/components.share.css);
+@import url(sitio/components.features.css);
+@import url(sitio/components.content.css);
+@import url(sitio/components.property-card.css);
+@import url(sitio/components.related-slider.css);
+
+/* Page */
+@import url(sitio/property.generic.css);

@@ -1,0 +1,94 @@
+/* ******************************************** */
+/** COMPONENT: HEADINGS
+/* ******************************************** */
+
+/*
+  ! HEADING
+  OVERRIDES:
+    * // --heading-ff               // Font family
+    * // --heading-fz               // Font size
+    * // --heading-fw               // Font weight
+    * // --heading-lh               // Line height
+    * // --heading-ls               // Letter spacing
+    * // --heading-color            // Color
+    * // --heading-strong-color     // Strong Color
+    * // --heading-strong-fw        // Strong Font weight
+*/
+
+
+
+.u-heading{
+  --_fz: var(--fz-500);
+  --_lh: 1.1;
+  --_fw: 500;
+  --_color: var(--color-primary-400);
+  --_ff: var(--font-alt);
+  
+  font-size: var(--heading-fz, var(--_fz));
+  font-weight: var(--heading-fw, var(--_fw));
+  font-family: var(--heading-ff,var(--_ff));
+  color: var(--heading-color,var(--_color));
+  line-height: var(--heading-lh, var(--_lh));
+  letter-spacing: var(--heading-ls, initial);
+  max-width: var(--heading-max-w, inherit);
+}
+
+.u-heading--border{
+  --_border-color: var(--color-primary-300);
+  position: relative;
+}
+
+.u-heading--border::after{
+  --_w: min(80%,18rem);
+  --_h: .2rem;
+
+  content: '';
+  display: block;
+  width: var(--heading-border-w, var(--_w));
+  height: var(--heading-border-h, var(--_h));
+  background-color: var(--heading-border-color, var(--_border-color));
+  margin-top: 1em;
+}
+
+.u-heading--centered{
+  text-align: center;
+}
+
+.u-heading--centered.u-heading--border::after{
+  margin-inline: auto;
+}
+
+.u-heading strong{
+  --_fw: 500;
+  font-style: normal;
+}
+
+.u-heading span[class*="icon-"]{
+  font-size: var(--fz-500);
+  margin-right: .7em;
+}
+
+.u-heading + .u-text, 
+.u-subheading + .u-text,
+.u-heading + .u-subheading{
+  margin-top: 1em;
+}
+
+/*  */
+.u-subheading{
+  --_ff: var(--font);
+  --_fz: var(--fz-400);
+  --_color: var(--color-neutral-100);
+
+  font-family: var(--subheading-ff, var(--_ff));
+  font-size: var(--subheading-fz, var(--_fz));
+  color: var(--subheading-color, var(--_color));
+}
+
+.u-subheading--centered{
+  text-align: center;
+}
+
+
+
+ 

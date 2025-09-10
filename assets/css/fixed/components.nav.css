@@ -1,0 +1,140 @@
+/* ******************************************** */
+/** COMPONENTS: NAV (Fixed)
+/* ******************************************** */
+
+/* ********************** ONLY MOBILE ********************** */
+
+@media (max-width: 61.1875rem)
+/* up to 979px */
+    {
+
+    .c-header__nav {
+        display: none;
+    }
+
+    :root .c-nav {
+        --_list-gap: 0;
+        --_padding-x: calc(var(--wrapper-x)*2);
+        --_nav-bg: var(--color-neutral-600);
+        --_fz: var(--fz-300);
+        --_nav-delay: 300ms;
+        --_nav-pt: calc(var(--header) + 3rem);
+        --_item-py: 1em;
+
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-color: var(--_nav-bg);
+    }
+
+    .c-nav__list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--_list-gap);
+        width: max-content;
+        padding-inline: var(--_padding-x);
+        padding-top: var(--_nav-pt);
+        width: 100%;
+        transition: top .2s ease-out;
+        overflow: hidden;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+        margin-left: 0;
+    }
+
+    .c-nav-secondary__list{
+        margin-right: 1rem;
+    }
+
+    .c-nav__list--social{
+        flex-direction: row;
+    }
+
+    .c-nav__group .c-nav__list--languages {
+        padding-bottom: 0;
+    }
+
+    .c-nav__list--languages::after {
+        display: none;
+    }
+
+    .c-nav__item {
+        display: block;
+        width: 100%;
+    }
+
+    .c-nav__item {
+        padding-block: var(--_item-py);
+    }
+
+    .c-btn-show-nav:checked~.c-nav {
+        display: block;
+        animation: showNav var(--_nav-delay) ease-out forwards;
+    }
+
+    .c-nav.is-closing {
+        display: block;
+        animation: hideNav calc(var(--_nav-delay) * 1.1) ease-out forwards
+    }
+
+}
+
+@keyframes showNav {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes hideNav {
+    0% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+
+/* ********************** MEDIA HOVER ********************** */
+
+@media (hover: hover) { 
+
+    .c-nav__link{
+        position: relative;
+        padding-block: .2em;
+        transition: color var(--generic-delay) ease-out;
+    }
+
+    .c-nav__link::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: currentColor;
+        transform: scale3d(0,0,0);
+        transition: transform var(--generic-delay) ease-out;
+    }
+
+    .c-nav__link:hover{
+        color: var(--color-hover);
+        transition: color var(--generic-delay) ease-out;
+    }
+
+    .c-nav__link:hover::after{
+        transform: scale3d(1,1,1);
+        transform-origin: center;
+        transition: transform var(--generic-delay) ease-out;
+    }
+
+}

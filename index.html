@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Index | Lijtmaer
+    </title>
+
+    <!-- ! STYLES -->
+    <link rel="stylesheet" href="/assets/css/fixed.css">
+    <link rel="stylesheet" href="/assets/css/fixed.inline.css">
+
+
+
+    
+
+    <!-- ! ICONS -->
+    <link rel="stylesheet" href="https://i.icomoon.io/public/dd6053bc61/Lijmaer/style.css">
+</head>
+
+<body>
+    <style>
+        h1 {
+            font-size: 3.4rem;
+            color: var(--color-primary-400);
+            font-family: var(--font-alt);
+            margin-top: 5rem;
+            border-bottom: .2rem solid var(--color-primary-400);
+            width: max-content;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--color-primary-400);
+            margin-top: 3em;
+        }
+
+        .list {
+            padding-top: 0.8rem;
+            counter-reset: listItem;
+        }
+
+        .list li {
+            font-size: 1.6rem;
+            margin-top: 0.5em;
+            padding-block: 0.25em;
+            counter-increment: listItem;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: start;
+            justify-items: start;
+            column-gap: 0.25em;
+            row-gap: 0.125em;
+        }
+
+        .list li>* {
+            grid-column: 2 / 3;
+        }
+
+        .list a {
+            display: inline-block;
+            width: auto;
+            color: inherit;
+
+        }
+
+        .list li::before {
+            content: counter(listItem, var(--_type, numeric))". ";
+            opacity: 0.5;
+            grid-column: 1 / 2;
+        }
+
+        .list :any-link:hover {
+            color: var(--color-hover-700);
+            border-color: hsl(var(--color-hover-700-hsl) / 70%);
+        }
+
+        .list li>ul {
+            padding-top: 0.25em;
+            counter-reset: listItem;
+            padding-left: 1.5em;
+        }
+
+        .list ul {
+            --_type: lower-alpha
+        }
+
+        .list ul ul {
+            --_type: upper-roman
+        }
+
+        .list small {
+            display: block;
+            font-size: 0.9em;
+            opacity: 0.6;
+        }
+
+        .list small.warning {
+            color: var(--color-context-warning);
+        }
+
+        .list small.green {
+            color: var(--color-context-success);
+        }
+    </style>
+    <div>
+        <div class="o-wrapper o-section">
+            <h1>Lijtmaer Index</h1>
+
+            <h2>Páginas genericos</h2>
+            <ul class="list">
+                <li>
+                    <a href="/pages/home.html" target="_blank">Home</a>
+                </li>
+                <li>
+                    <a href="/pages/available-units.html" target="_blank">Unidades disponibles</a>
+                </li>
+                <li>
+                    <a href="/pages/search-results.html" target="_blank">Resultados de busqueda</a>
+                </li>
+                <li>
+                    <a href="/pages/without-results.html" target="_blank">Sin resultados de busqueda</a>
+                </li>
+                <li>
+                    <a href="/pages/property-detail.html" target="_blank">Ficha apartamento</a>
+                </li>
+                <li>
+                    <a href="/pages/property-detail-building.html" target="_blank">Ficha edificio</a>
+                </li>
+                <li>
+                    <a href="/pages/enter-property.html" target="_blank">Ingresar propiedad</a>
+                </li>
+                <li>
+                    <a href="/pages/exclusive-projects.html" target="_blank">Proyectos exlusivos</a>
+                </li>
+                    <li>
+                        <a href="/pages/about-us.html" target="_blank">Nosotros</a>
+                    </li>
+                    <li>
+                        <a href="/pages/services.html" target="_blank">Desarrolla con nosotros</a>
+                    </li>
+            </ul>
+
+            <h2>Componentes genericos</h2>
+            <ul class="list">
+                <li>
+                    <a href="/components/header.html" target="_blank">Header</a>
+                </li>
+                <li>
+                    <a href="/components/footer.html" target="_blank">Footer</a>
+                </li>
+            </ul>
+
+            <h2>Componentes</h2>
+            <ul class="list">
+                <li>
+                    <a href="/components/hero.html" target="_blank">Hero</a>
+                </li>
+                <li>
+                    <a href="/components/categories.html" target="_blank">Categories</a>
+                </li>
+
+                <li>
+                    <a href="/components/filters.html" target="_blank">Filters (Pendiente Mobile)</a>
+                </li>
+
+                <li>
+                    <a href="/components/property-card.html" target="_blank">Card Property</a>
+                </li>
+
+                <li>
+                    <a href="/components/popup.html" target="_blank">Popup</a>
+                </li>
+
+                <li>
+                    <a href="/components/btn.html" target="_blank">Buttons</a>
+                </li>
+
+                <li>
+                    <a href="/components/cta.html" target="_blank">Footer</a>
+                </li>
+
+                <li>
+                    <a href="/components/breadcrum.html" target="_blank">Breadcrumb</a>
+                </li>
+
+                <li>
+                    <a href="/components/form.html" target="_blank">Form</a>
+                </li>
+
+                <li>
+                    <a href="/components/dropdown.html" target="_blank">Dropdown</a>
+                </li>
+
+                <li>
+                    <a href="/components/check-item.html" target="_blank">Check-item - Favoritos</a>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+/* ******************************************** */
+/** COMPONENT: CARD ABOUT
+/* ******************************************** */
+
+/* CARD ABOUT */
+
+.c-projects-grid {
+  --_cols: 1;
+
+  display: grid;
+  grid-template-columns: repeat(var(--_cols), 1fr);
+  gap: 2.5em;
+}
+
+.c-card {
+  --_fz: var(--fz-100);
+  --_visible-height: 20rem;
+  --_space-y: .5em;
+  --_py: 1.1rem;
+  --_px: 1.5rem;
+
+  --heading-color: var(--color-neutral-100);
+  --heading-fz: var(--fz-400);
+
+  position: relative;
+  transition: transform 0.3s ease;
+  border-radius: var(--generic-radius);
+  background-color: var(--color-neutral-500);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.c-card__pic{
+  aspect-ratio: 5 / 6;
+}
+
+.c-card__pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c-card__heading {
+  margin-inline: auto;
+  border-top: .2rem solid var(--color-primary-400);
+  padding-top: .3em;
+}
+
+.c-card__visible {
+  padding-block: var(--_py);
+  padding-inline: var(--_px);
+}
+
+.c-card__hidden {
+  margin-top: var(--_space-y);
+  padding-top: var(--_py);
+  padding-inline: var(--_px);
+}
+
+
+
+
+
+/* ********************** SHORT MOBILE ********************** */
+@media (max-width: 22.4375rem) {
+  /* 359px */
+}
+
+
+/* ********************** TALL MOBILE PORTRAIT ********************** */
+@media (max-width: 47.9375rem) and (min-height: 45.625rem) {
+  /* 767px, 730px */
+}
+
+
+/* ********************** MOBILE LANDSCAPE ********************** */
+@media (orientation: landscape) and (min-width: 31.25rem) and (max-width: 47.9375rem) {
+  /* 500px, 767px */
+}
+
+
+/* ********************** de Mobile a TABLET ********************** */
+@media (min-width: 48rem) {
+  /* 768px */
+
+  .c-projects-grid {
+    --_cols: 3;
+  }
+}
+
+@media (min-width: 48rem) and (orientation: portrait) {}
+
+
+/* ********************** de Tablet a DESKTOP ********************** */
+@media (min-width: 61.25rem) {
+  /* 980px */
+
+  
+}
+
+
+/* ********************** de Desktop a DESKTOP 2 ********************** */
+@media (min-width: 75rem) {
+  /* 1200px */
+
+  .c-projects-grid {
+    --_cols: 5;
+  }
+
+  .c-card__pic {
+    aspect-ratio: 3 / 4;
+    transition: scale 0.5s ease;
+  }
+
+  .c-card__hidden {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-block: var(--_py);
+    padding-inline: var(--_px);
+
+    width: 100%;
+    height: 100%;
+
+    color: var(--color-neutral-100);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .c-card:hover .c-card__hidden {
+    opacity: 1;
+  }
+
+  .c-card__visible {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: var(--_visible-height);
+    padding-block: 1.5rem;
+    padding-inline: 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    background-color: hsl(var(--color-neutral-500-hsl) / 70%);
+    backdrop-filter: blur(.4rem);
+    clip-path: polygon(0 70%, 100% 70%, 100% 100%, 0 100%);
+    transition: clip-path 0.5s ease;
+  }
+
+  .c-card:hover .c-card__visible {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path 0.5s ease;
+    height: 100%;
+  }
+
+  .c-card:hover .c-card__pic {
+    scale: 1.05;
+    transition: scale 0.5s ease;
+  }
+}
+
+@media (min-width: 75rem) and (min-height: 45rem) {
+  /* 1200, 720 */
+}
+
+
+/* ********************** de Desktop 2 a HD ********************** */
+@media (min-width: 87.5rem) {
+  /* 1400px */
+}
+
+@media (min-width: 87.5rem) and (min-height: 49.375rem) {
+  /* 1400px, 790px */
+}
+
+
+/* ********************** de Hd a FULL HD ********************** */
+@media (min-width: 100rem) {
+  /* 1600px */
+}
+
+@media (min-width: 100rem) and (min-height: 49.375rem) {
+  /* 1600px, 790px */
+}
+
+@media (min-width: 100rem) and (min-height: 56.25rem) {
+  /* 1600px, 900px */
+}
+
+@media (min-width: 112.5rem) {
+  /* 1800px */
+}
+
+@media (min-width: 112.5rem) and (min-height: 56.25rem) {
+  /* 1800px, 900px */
+}

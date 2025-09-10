@@ -1,0 +1,207 @@
+/* ******************************************** */
+/** COMPONENT: FILTERS  
+/* ******************************************** */
+
+/* FILTERS */
+
+.c-filters {
+    --_bg: var(--color-neutral-600);
+    --_radius: 2rem;
+    --_py: 1.5rem;
+    --_px: 2.5rem;
+    --_icon-size: 1.2rem;
+    --_fz: var(--fz-200);
+    --_gap: 2rem;
+    --_color: var(--color-neutral-100);
+
+    --btn-fz: var(--fz-200);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--filters-gap, var(--_gap));
+    align-items: center;
+}
+
+.c-filters__select-holder {
+    --_arrow-size: 2.4rem;
+    --_arrow-bg: hsl(var(--color-neutral-200-hsl) / 40%);
+    --_arrow-color: var(--color-neutral-100);
+
+    position: relative;
+}
+
+.c-filters__select-holder::after {
+    font-family: "icomoon";
+    content: "\e915";
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: translateY(-50%);
+    width: var(--_arrow-size);
+    height: var(--_arrow-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    font-size: var(--filters-icon-size, var(--_icon-size));
+    color: var(--_arrow-color);
+    background-color: var(--filters-bg-icon, var(--_arrow-bg));
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.c-filters__select,
+.c-filters__input {
+    --_bg-item: var(--color-neutral-500);
+    --_py: 0.72em;
+    --_px: 1em;
+    --_radius: 4rem;
+
+
+    color: var(--filters-color, var(--_color));
+    background-color: var(--filters-bg-item, var(--_bg-item));
+    font-size: var(--filters-fz, var(--_fz));
+    padding: var(--filters-py, var(--_py)) var(--filters-px, var(--_px));
+    border-radius: var(--filters-radius, var(--_radius));
+    box-shadow: 0 0 0 .1rem var(--_bg);
+    width: 100%;
+    cursor: pointer;
+}
+
+.c-filters__select{
+    padding-right: calc(var(--filters-px, var(--_px)) + var(--filters-icon-size, var(--_icon-size) *2));
+}
+
+.c-filters__input {
+    color: var(--filter-input-color, var(--_color));
+    transition: box-shadow var(--generic-delay) ease-out;
+}
+
+.c-filters__input:is(:focus, :active) {
+    box-shadow: 0 0 0 .2rem var(--color-hover);
+    transition: box-shadow var(--generic-delay) ease-out;
+}
+
+
+/* ********************** MEDIA HOVER ********************** */
+
+@media (hover: hover) { 
+    .c-filters__select:hover{
+        --_bg-item: hsl(var(--color-hover-hsl)/20%);
+        transition: background-color var(--generic-delay) ease-out;
+    }
+    
+    .c-filters__select-holder:hover{
+        --_arrow-bg: var(--color-hover);
+        --_arrow-color: var(--color-neutral-500);
+    }
+
+    .c-filters__select-holder::after{
+        transition: background-color var(--generic-delay) ease-out, color var(--generic-delay) ease-out;
+    }
+
+}   
+
+
+/* ********************** SHORT MOBILE ********************** */
+
+@media (max-width: 22.4375rem) {
+    /* 359px */
+}
+
+
+
+
+
+/* ********************** TALL MOBILE PORTRAIT ********************** */
+
+@media (max-width: 47.9375rem) and (min-height: 45.625rem) {
+    /* 767px, 730px */
+}
+
+
+
+
+
+/* ********************** MOBILE LANDSCAPE ********************** */
+
+@media (orientation: landscape) and (min-width: 31.25rem) and (max-width: 47.9375rem) {
+    /* 500px, 767px */
+}
+
+
+
+
+
+/* ********************** de Mobile a TABLET ********************** */
+
+@media (min-width: 48rem) {
+    /* 768px */
+}
+
+@media (min-width: 48rem) and (orientation: portrait) {}
+
+
+
+
+/* ********************** de Tablet a DESKTOP ********************** */
+
+@media (min-width: 61.25rem) {
+    /* 980px */
+
+    
+.c-filters {
+    flex-direction: row;
+}
+
+}
+
+
+/* ********************** de Desktop a DESKTOP 2 ********************** */
+
+@media (min-width: 75rem) {
+    /* 1200px */
+}
+
+@media (min-width: 75rem) and (min-height: 45rem) {
+    /* 1200, 720 */
+}
+
+
+
+
+/* ********************** de Desktop 2 a HD ********************** */
+
+@media (min-width: 87.5rem) {
+    /* 1400px */
+}
+
+@media (min-width: 87.5rem) and (min-height: 49.375rem) {
+    /* 1400px, 790px */
+}
+
+
+
+
+/* ********************** de Hd a FULL HD ********************** */
+
+@media (min-width: 100rem) {
+    /* 1600px */
+}
+
+@media (min-width: 100rem) and (min-height: 49.375rem) {
+    /* 1600px, 790px */
+}
+
+@media (min-width: 100rem) and (min-height: 56.25rem) {
+    /* 1600px, 900px */
+}
+
+@media (min-width: 112.5rem) {
+    /* 1800px */
+}
+
+@media (min-width: 112.5rem) and (min-height: 56.25rem) {
+    /* 1800px, 900px */
+}

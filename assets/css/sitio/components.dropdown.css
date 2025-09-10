@@ -1,0 +1,248 @@
+/* ******************************************** */
+/** COMPONENT: DROPDOWN
+/* ******************************************** */
+
+/* DROPDOWN */
+
+.c-dropdown-grid {
+    --_cols: 1;
+    display: grid;
+    grid-template-columns: repeat(var(--_cols), 1fr);
+}
+
+.c-dropdown {
+    --_fz: var(--fz-100);
+    --_bg-color: var(--color-neutral-500);
+    --_py: calc(var(--section-y)*.8);
+    --_px: var(--wrapper-x);
+
+    position: relative;
+}
+
+.c-dropdown__visible {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    width: 100%;
+    padding: var(--dropdown-py, var(--_py)) var(--dropdown-px, var(--_px));
+
+}
+
+.c-dropdown__label {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.c-dropdown__input {
+    position: absolute;
+    left: -999999px;
+}
+
+.c-dropdown__collapsable {
+  --_drop-duration: 700ms;
+
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    pointer-events: none;
+    transition: grid-template-rows var(--_drop-duration) ease;
+
+}
+
+.c-dropdown__holder {
+    min-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-1rem)
+}
+
+.c-dropdown__input:checked~.c-dropdown__collapsable {
+    grid-template-rows: 1fr;
+    pointer-events: initial;
+    padding: var(--dropdown-py, var(--_py)) var(--dropdown-px, var(--_px));
+}
+
+.c-dropdown__arrow {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: hsl(var(--color-neutral-300-hsl) / 30%);
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.c-dropdown__arrow[class*="icon-"] {
+    font-size: 1.5rem;
+}
+
+.c-dropdown__icon[class*="icon-"] {
+    font-size: 3.5rem;
+}
+
+.c-dropdown__input:checked~.c-dropdown__visible .c-dropdown__arrow {
+    transform: rotate(180deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.c-dropdown__input:checked~.c-dropdown__visible {
+    --subheading-color: var(--color-primary-400);
+    color: var(--color-primary-400);
+}
+
+.c-dropdown__input:checked~.c-dropdown__collapsable .c-dropdown__holder {
+    transition: opacity var(--drop-duration) ease, transform var(--drop-duration) ease;
+    opacity: 1;
+    transform: translateY(0)
+  }
+
+
+/* Colores intercalados para los dropdowns */
+.c-dropdown:nth-child(odd) .c-dropdown__visible,
+.c-dropdown:nth-child(odd) .c-dropdown__collapsable {
+  background-color: var(--dropdown-bg-color, var(--_bg-color));
+}
+
+.c-dropdown:nth-child(even) .c-dropdown__visible,
+.c-dropdown:nth-child(even) .c-dropdown__collapsable {
+  --_bg-color: var(--color-neutral-600);
+  background-color: var(--dropdown-bg-color, var(--_bg-color));
+}
+
+
+
+
+
+
+/* ********************** SHORT MOBILE ********************** */
+
+@media (max-width: 22.4375rem) {
+    /* 359px */
+}
+
+
+
+
+
+/* ********************** TALL MOBILE PORTRAIT ********************** */
+
+@media (max-width: 47.9375rem) and (min-height: 45.625rem) {
+    /* 767px, 730px */
+}
+
+
+
+
+
+/* ********************** MOBILE LANDSCAPE ********************** */
+
+@media (orientation: landscape) and (min-width: 31.25rem) and (max-width: 47.9375rem) {
+    /* 500px, 767px */
+}
+
+
+
+
+
+/* ********************** de Mobile a TABLET ********************** */
+
+@media (min-width: 48rem) {
+    /* 768px */
+}
+
+@media (min-width: 48rem) and (orientation: portrait) {}
+
+
+
+
+/* ********************** de Tablet a DESKTOP ********************** */
+
+@media (min-width: 61.25rem) {
+    /* 980px */
+
+    .c-dropdown-grid {
+        --_cols: 2;
+    }
+
+    .c-dropdown__collapsable {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translateY(100%);
+        z-index: 1;
+    }
+
+    .c-dropdown__holder {
+        max-height: 30rem;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-neutral-300) var(--color-neutral-600);
+        -ms-overflow-style: auto;
+    }
+}
+
+
+
+
+/* ********************** de Desktop a DESKTOP 2 ********************** */
+
+@media (min-width: 75rem) {
+    /* 1200px */
+
+    .c-dropdown-grid {
+        --_cols: 3;
+    }
+
+
+
+}
+
+@media (min-width: 75rem) and (min-height: 45rem) {
+    /* 1200, 720 */
+}
+
+
+
+
+/* ********************** de Desktop 2 a HD ********************** */
+
+@media (min-width: 87.5rem) {
+    /* 1400px */
+}
+
+@media (min-width: 87.5rem) and (min-height: 49.375rem) {
+    /* 1400px, 790px */
+}
+
+
+
+
+/* ********************** de Hd a FULL HD ********************** */
+
+@media (min-width: 100rem) {
+    /* 1600px */
+}
+
+@media (min-width: 100rem) and (min-height: 49.375rem) {
+    /* 1600px, 790px */
+}
+
+@media (min-width: 100rem) and (min-height: 56.25rem) {
+    /* 1600px, 900px */
+}
+
+@media (min-width: 112.5rem) {
+    /* 1800px */
+}
+
+@media (min-width: 112.5rem) and (min-height: 56.25rem) {
+    /* 1800px, 900px */
+}

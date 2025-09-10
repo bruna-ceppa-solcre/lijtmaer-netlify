@@ -1,0 +1,49 @@
+/* ******************************************** */
+/** SETTINGS: FONTS
+/* ******************************************** */
+
+@font-face {
+    font-family: 'Playfair Display - Lijtmaer';
+    src: url('/assets/fonts/PlayfairDisplay-Medium.woff2') format('woff2'),
+        url('/assets/fonts/PlayfairDisplay-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display - Lijtmaer';
+    src: url('/assets/fonts/PlayfairDisplay-SemiBold.woff2') format('woff2'),
+        url('/assets/fonts/PlayfairDisplay-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat - Lijtmaer';
+    src: url('/assets/fonts/Montserrat-Medium.woff2') format('woff2'),
+        url('/assets/fonts/Montserrat-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat - Lijtmaer';
+    src: url('/assets/fonts/Montserrat-SemiBold.woff2') format('woff2'),
+        url('/assets/fonts/Montserrat-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat - Lijtmaer';
+    src: url('/assets/fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('/assets/fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

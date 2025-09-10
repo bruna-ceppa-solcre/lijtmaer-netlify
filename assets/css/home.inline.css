@@ -1,0 +1,10 @@
+/* ******************************************** */
+/** HOME INLINE
+/* ******************************************** */
+
+/* Plugins */
+@import url(inline/tiny-slider.css);
+@import url(inline/tiny-slider-custom.css);
+
+/* Components */
+@import url(inline/components.hero.css);

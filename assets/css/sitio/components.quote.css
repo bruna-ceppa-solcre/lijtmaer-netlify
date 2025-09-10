@@ -1,0 +1,154 @@
+/* ******************************************** */
+/** COMPONENT: QUOTE
+/* ******************************************** */
+
+/* QUOTE */
+
+.c-quote {
+    --_fz: var(--fz-500);
+    --_lh: 1.4;
+    --_color: var(--color-primary-400);
+    --_quotes-size: clamp(4rem, 8vw, 20rem);
+    --_px: 2em;
+
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.c-quote__cite{
+    font-size: var(--quote-cite-fz, var(--_fz));
+    font-family: var(--font-alt);
+    line-height: var(--quote-cite-lh, var(--_lh));
+    color: var(--quote-cite-color, var(--_color));
+    padding-inline: var(--quote-px, var(--_px));
+    position: relative;
+    flex: 1;
+}
+
+.c-quote::before,
+.c-quote::after {
+    font-family: var(--font-alt);
+    font-size: var(--quote-quotes-size, var(--_quotes-size));
+    color: var(--quote-quotes-color, var(--_color));
+    display: block;
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.c-quote::before {
+    content: '\201C';
+    margin-right: -0.5em;
+}
+
+.c-quote::after {
+    content: '\201D';
+    margin-left: -0.5em;
+}
+
+
+
+/* ********************** SHORT MOBILE ********************** */
+
+@media (max-width: 22.4375rem) {
+    /* 359px */
+}
+
+
+
+
+
+/* ********************** TALL MOBILE PORTRAIT ********************** */
+
+@media (max-width: 47.9375rem) and (min-height: 45.625rem) {
+    /* 767px, 730px */
+}
+
+
+
+
+
+/* ********************** MOBILE LANDSCAPE ********************** */
+
+@media (orientation: landscape) and (min-width: 31.25rem) and (max-width: 47.9375rem) {
+    /* 500px, 767px */
+}
+
+
+
+
+
+/* ********************** de Mobile a TABLET ********************** */
+
+@media (min-width: 48rem) {
+    /* 768px */
+    
+    .c-quote {
+        --_px: 3em;
+    }
+}
+
+@media (min-width: 48rem) and (orientation: portrait) {}
+
+
+
+
+/* ********************** de Tablet a DESKTOP ********************** */
+
+@media (min-width: 61.25rem) {
+    /* 980px */
+}
+
+
+
+
+/* ********************** de Desktop a DESKTOP 2 ********************** */
+
+@media (min-width: 75rem) {
+    /* 1200px */
+}
+
+@media (min-width: 75rem) and (min-height: 45rem) {
+    /* 1200, 720 */
+}
+
+
+
+
+/* ********************** de Desktop 2 a HD ********************** */
+
+@media (min-width: 87.5rem) {
+    /* 1400px */
+}
+
+@media (min-width: 87.5rem) and (min-height: 49.375rem) {
+    /* 1400px, 790px */
+}
+
+
+
+
+/* ********************** de Hd a FULL HD ********************** */
+
+@media (min-width: 100rem) {
+    /* 1600px */
+}
+
+@media (min-width: 100rem) and (min-height: 49.375rem) {
+    /* 1600px, 790px */
+}
+
+@media (min-width: 100rem) and (min-height: 56.25rem) {
+    /* 1600px, 900px */
+}
+
+@media (min-width: 112.5rem) {
+    /* 1800px */
+}
+
+@media (min-width: 112.5rem) and (min-height: 56.25rem) {
+    /* 1800px, 900px */
+}

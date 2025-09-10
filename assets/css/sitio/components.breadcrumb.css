@@ -1,0 +1,136 @@
+/* ******************************************** */
+/** COMPONENT: BREADCRUMB
+/* ******************************************** */
+
+/* BREADCRUMB */
+
+.c-breadcrumb {
+    --_fz: var(--fz-100);
+    --_fw: 500;
+    --_color: var(--color-neutral-100);
+    --_gap: 1.2rem;
+    --_py: calc(var(--section-y) * .5);
+    --_px: var(--wrapper-x);
+}
+
+.c-breadcrumb__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--breadcrumb-gap, var(--_gap));
+}
+
+.c-breadcrumb__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.c-breadcrumb__item:not(:last-child)::after {
+    content: '';
+    width: .1rem;
+    height: var(--_fz);
+    background-color: var(--_color);
+    margin-left: 1em;
+}
+
+.c-breadcrumb__link{
+    color: var(--breadcrumb-color,var(--_color));
+    font-weight: var(--_fw);
+    font-size: var(--_fz);
+}
+
+
+
+/* ********************** MEDIA HOVER ********************** */
+
+@media (hover: hover) { 
+
+     .c-breadcrumb__link:hover{
+        opacity: .4;
+     }
+
+}
+
+
+
+  
+/* ********************** SHORT MOBILE ********************** */
+
+@media (max-width: 22.4375rem) { /* 359px */
+}
+
+
+
+
+
+/* ********************** TALL MOBILE PORTRAIT ********************** */
+
+@media (max-width: 47.9375rem) and (min-height: 45.625rem) { /* 767px, 730px */
+}
+
+ 
+
+
+
+/* ********************** MOBILE LANDSCAPE ********************** */
+
+@media (orientation: landscape) and (min-width: 31.25rem) and (max-width: 47.9375rem) { /* 500px, 767px */
+}
+
+
+
+
+
+/* ********************** de Mobile a TABLET ********************** */
+
+@media (min-width: 48rem) { /* 768px */
+}
+@media (min-width: 48rem) and (orientation: portrait) {
+}
+
+
+
+
+/* ********************** de Tablet a DESKTOP ********************** */
+
+@media (min-width: 61.25rem) { /* 980px */
+}
+
+
+
+
+/* ********************** de Desktop a DESKTOP 2 ********************** */
+
+@media (min-width: 75rem) { /* 1200px */
+}
+@media (min-width: 75rem) and (min-height: 45rem) { /* 1200, 720 */
+}
+
+
+
+
+/* ********************** de Desktop 2 a HD ********************** */
+
+@media (min-width: 87.5rem) { /* 1400px */
+}
+@media (min-width: 87.5rem) and (min-height: 49.375rem) { /* 1400px, 790px */
+}
+
+
+
+
+/* ********************** de Hd a FULL HD ********************** */
+
+@media (min-width: 100rem) { /* 1600px */
+}
+
+@media (min-width: 100rem) and (min-height: 49.375rem) { /* 1600px, 790px */
+}
+@media (min-width: 100rem) and (min-height: 56.25rem) { /* 1600px, 900px */
+}
+
+@media (min-width: 112.5rem) { /* 1800px */
+}
+@media (min-width: 112.5rem) and (min-height: 56.25rem) { /* 1800px, 900px */
+}

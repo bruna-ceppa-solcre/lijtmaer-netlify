@@ -1,0 +1,11 @@
+/* ******************************************** */
+/** CATALOG
+/* ******************************************** */
+
+/* Objects */
+@import url(sitio/objects.grid.css);
+
+/* Components */
+@import url(sitio/components.categories.css);
+@import url(sitio/components.filters.css);
+@import url(sitio/components.property-card.css);

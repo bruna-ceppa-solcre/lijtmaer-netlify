@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Filters | Lijtmaer
+    </title>
+
+    <!-- ! STYLES -->
+    <link rel="stylesheet" href="/assets/css/fixed.css">
+    <link rel="stylesheet" href="/assets/css/fixed.inline.css">
+    <link rel="stylesheet" href="/assets/css/sitio/components.filters.css">
+
+
+    
+
+    <!-- ! ICONS -->
+    <link rel="stylesheet" href="https://i.icomoon.io/public/dd6053bc61/Lijmaer/style.css">
+</head>
+
+<body>
+
+    <div class="o-section o-wrapper ">
+        
+        <!-- ! FILTERS: Start -->
+            <div class="c-filters">
+                <div class="c-filters__select-holder">
+                    <select id="operacion" class="c-filters__select">
+                        <option value="" disabled selected>Operación</option>
+                        <option value="venta">Venta</option>
+                        <option value="alquiler">Alquiler</option>
+                        <option value="alquiler-temporal">Alquiler temporal</option>
+                        <option value="indistinto">Indistinto</option>
+                    </select>
+                </div>
+                <div class="c-filters__select-holder">
+                    <select id="tipo-propiedad" class="c-filters__select">
+                        <option value="" disabled selected>Tipo de propiedad</option>
+                        <option value="indistinto">Indistinto</option>
+                        <option value="apartamento">Apartamento</option>
+                        <option value="casa">Casa</option>
+                        <option value="barrio-cerrado">Barrio cerrado</option>
+                        <option value="campo">Campo</option>
+                        <option value="chacra">Chacra</option>
+                        <option value="terreno">Terreno</option>
+                        <option value="local">Local</option>
+
+                    </select>
+                </div>
+                <div class="c-filters__select-holder">
+                    <select id="dormitorios" class="c-filters__select">
+                        <option value="" disabled selected>Dormitorios</option>
+                        <option value="indistinto">Indistinto</option>
+                        <option value="monoambiente">Monoambiente</option>
+                    </select>
+                </div>
+                <div class="c-filters__select-holder">
+                    <select id="precio" class="c-filters__select">
+                        <option value="" disabled selected>Precio</option>
+                        <option value="value">Hasta 100.000</option>
+                        <option value="indistinto">Desde 100.000</option>
+                    </select>
+                </div>
+                <label for="search" class="c-filters__label">
+                    <input class="c-filters__input" type="text" id="search" placeholder="Palabra clave o código">
+                </label>
+                <button type="submit" class="c-btn c-btn--icon"><span class="icon-search"></span>Buscar</button>
+            </div>
+            <!-- ! FILTERS: End -->
+
+    </div>
+
+</body>
+
+</html>

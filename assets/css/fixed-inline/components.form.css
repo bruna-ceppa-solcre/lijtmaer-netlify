@@ -1,0 +1,305 @@
+/* ******************************************** */
+/** COMPONENT: FORM
+/* ******************************************** */
+
+/* FORM */
+
+.c-form {
+    --_cols: 1;
+    --_fz: var(--fz-100);
+    --_input-bg: var(--color-neutral-500);
+    --_color: var(--color-neutral-100);
+    --_px: 1.5rem;
+    --_py: 1rem;
+    --_gap: 1.2em;
+    --_space-y: 1rem;
+    --_transition: all 0.3s ease;
+
+    display: grid;
+    grid-template-columns: repeat(var(--_cols), 1fr);
+    font-size: var(--_fz);
+    margin-top: var(--_space-y);
+}
+
+/* ==== Estructura ==== */
+.c-form__group + .c-form__group {
+    margin-top: var(--_gap);
+}
+
+.c-form__row {
+    display: flex;
+    gap: var(--_gap);
+}
+
+.c-form__row .c-form__label {
+    margin-top: var(--_gap);
+    width: 100%;
+}
+
+.c-form__label {
+    display: flex;
+    flex-direction: column;
+}
+
+.c-form__label:not(:first-child) {
+    margin-top: var(--_gap);
+}
+
+.c-form__label--inline {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.c-form__label--phone {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 0.75rem;
+}
+
+
+/* ==== Inputs & Select ==== */
+.c-form__input {
+    background-color: var(--form-input-bg, var(--_input-bg));
+    border: none;
+    border-radius: var(--form-input-radius, var(--generic-radius));
+    padding: var(--form-input-padding, var(--_py) var(--_px));
+    color: var(--form-input-color, var(--_color));
+    font-size: var(--_fz);
+    transition: var(--_transition);
+    box-shadow: 0 0 0 .1rem var(--color-neutral-500);
+    width: 100%;
+}
+
+.c-form__input::placeholder {
+    color: var(--form-input-placeholder-color, var(--color-neutral-100));
+    opacity: 0.7;
+}
+
+.c-form__input:is(:focus, :focus-visible) {
+    outline: none;
+    box-shadow: 0 0 0 .2rem var(--color-primary-400);
+}
+
+.c-form__input--textarea {
+    resize: none;
+    min-height: 16.4rem;
+}
+
+.c-form__select-holder .c-form__input {
+    cursor: pointer;
+    width: max-content;
+}
+
+/* ==== Estados ==== */
+.c-form__error .c-form__input {
+    box-shadow: 0 0 0 .1rem var(--color-error);
+}
+
+.c-form__error .c-form__input::placeholder {
+    color: var(--color-error);
+}
+
+.c-form__error-text {
+    color: var(--color-error);
+    margin-top: var(--_space-y);
+    text-align: left;
+}
+
+.c-form__success {
+    --_fz: var(--fz-400);
+    color: var(--color-primary-400);
+    font-family: var(--font-alt);
+    font-size: var(--_fz);
+    text-align: center;
+    margin-top: var(--_space-y);
+}
+
+/* ==== Radios & Opciones ==== */
+.c-form__field {
+    text-align: center;
+    margin-top: var(--_space-y);
+}
+
+.c-form__options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--_gap);
+    margin-top: var(--_space-y);
+}
+
+.c-form__option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: var(--_border-radius);
+    transition: var(--_transition);
+}
+
+.c-form__radio {
+    --_size: 1.25rem;
+    --_border-radius: 50%;
+
+    appearance: none;
+    width: var(--_size);
+    height: var(--_size);
+    border: none;
+    border-radius: var(--_border-radius);
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    transition: var(--_transition);
+    box-shadow: 0 0 0 .1rem var(--color-neutral-400);
+}
+
+.c-form__radio:checked {
+    box-shadow: 0 0 0 .1rem var(--color-primary-400);
+    background-color: var(--color-primary-400);
+}
+
+.c-form__radio:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-neutral-100);
+    border-radius: 50%;
+}
+
+.c-form__radio:focus {
+    outline: none;
+    box-shadow: 0 0 0 .1rem var(--color-primary-400);
+}
+
+.c-form__option-text {
+    color: var(--color-neutral-100);
+    font-size: var(--_fz);
+    cursor: pointer;
+}
+
+/* ==== Acciones ==== */
+.c-form__actions {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--_gap);
+    margin-top: var(--_gap);
+}
+
+
+
+/* ********************** SHORT MOBILE ********************** */
+
+@media (max-width: 22.4375rem) {
+    /* 359px */
+}
+
+
+
+
+
+/* ********************** TALL MOBILE PORTRAIT ********************** */
+
+@media (max-width: 47.9375rem) and (min-height: 45.625rem) {
+    /* 767px, 730px */
+}
+
+
+
+
+
+/* ********************** MOBILE LANDSCAPE ********************** */
+
+@media (orientation: landscape) and (min-width: 31.25rem) and (max-width: 47.9375rem) {
+    /* 500px, 767px */
+}
+
+
+
+
+
+/* ********************** de Mobile a TABLET ********************** */
+
+@media (min-width: 48rem) {
+    /* 768px */
+}
+
+@media (min-width: 48rem) and (orientation: portrait) {}
+
+
+
+
+/* ********************** de Tablet a DESKTOP ********************** */
+
+@media (min-width: 61.25rem) {
+    /* 980px */
+
+}
+
+
+
+
+/* ********************** de Desktop a DESKTOP 2 ********************** */
+
+@media (min-width: 75rem) {
+
+    /* 1200px */
+    .c-form--cols2 {
+        --_cols: 2;
+        gap: var(--_gap);
+    }
+
+    .c-form__group + .c-form__group {
+    margin-top: 0;
+}
+}
+
+@media (min-width: 75rem) and (min-height: 45rem) {
+    /* 1200, 720 */
+}
+
+
+
+
+/* ********************** de Desktop 2 a HD ********************** */
+
+@media (min-width: 87.5rem) {
+    /* 1400px */
+}
+
+@media (min-width: 87.5rem) and (min-height: 49.375rem) {
+    /* 1400px, 790px */
+}
+
+
+
+
+/* ********************** de Hd a FULL HD ********************** */
+
+@media (min-width: 100rem) {
+    /* 1600px */
+}
+
+@media (min-width: 100rem) and (min-height: 49.375rem) {
+    /* 1600px, 790px */
+}
+
+@media (min-width: 100rem) and (min-height: 56.25rem) {
+    /* 1600px, 900px */
+}
+
+@media (min-width: 112.5rem) {
+    /* 1800px */
+}
+
+@media (min-width: 112.5rem) and (min-height: 56.25rem) {
+    /* 1800px, 900px */
+}

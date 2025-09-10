@@ -1,0 +1,157 @@
+/* ******************************************** */
+/** COMPONENT: PROPERTY HEADER
+/* ******************************************** */
+
+/* PROPERTY HEADER */
+.c-property-header {
+    --_gap: 2em;
+    --_space-y: 1.6em;
+    --_fz: var(--fz-200);
+    --text-color: var(--color-neutral-100);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--property-header-gap, var(--_gap));
+    text-align: center;
+}
+
+.c-property-header__title {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5em;
+
+}
+
+.c-property-header__btn {
+    --link-fz: var(--fz-400);
+}
+
+.c-property-header__code {
+    --text-fz: var(--fz-000);
+}
+
+.c-property-header__price{
+    --heading-color: var(--color-neutral-100);
+}
+
+
+.c-property-header .u-text{
+    margin-top: var(--property-header-space-y, var(--_space-y));
+}
+
+.c-property-header__availability{
+    --_px: 1.2em;
+    --_py: .5em;
+   
+    padding-block: var(--_py);
+    padding-inline: var(--_px);
+    border-radius: var(--generic-radius);
+    background-color: hsl(var(--color-neutral-300-hsl) / 60%);
+}
+
+/* ********************** SHORT MOBILE ********************** */
+
+@media (max-width: 22.4375rem) {
+    /* 359px */
+}
+
+
+/* ********************** TALL MOBILE PORTRAIT ********************** */
+
+@media (max-width: 47.9375rem) and (min-height: 45.625rem) {
+    /* 767px, 730px */
+}
+
+
+
+/* ********************** MOBILE LANDSCAPE ********************** */
+
+@media (orientation: landscape) and (min-width: 31.25rem) and (max-width: 47.9375rem) {
+    /* 500px, 767px */
+}
+
+
+
+
+
+/* ********************** de Mobile a TABLET ********************** */
+
+@media (min-width: 48rem) {
+    /* 768px */
+}
+
+@media (min-width: 48rem) and (orientation: portrait) {}
+
+
+
+
+/* ********************** de Tablet a DESKTOP ********************** */
+
+@media (min-width: 61.25rem) {
+    /* 980px */
+
+    .c-property-header {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: initial;
+    }
+
+    .c-property-header .c-separator-line {
+        display: none;
+    }
+
+
+
+
+}
+
+
+/* ********************** de Desktop a DESKTOP 2 ********************** */
+
+@media (min-width: 75rem) {
+    /* 1200px */
+}
+
+@media (min-width: 75rem) and (min-height: 45rem) {
+    /* 1200, 720 */
+}
+
+
+
+
+/* ********************** de Desktop 2 a HD ********************** */
+
+@media (min-width: 87.5rem) {
+    /* 1400px */
+}
+
+@media (min-width: 87.5rem) and (min-height: 49.375rem) {
+    /* 1400px, 790px */
+}
+
+
+
+
+/* ********************** de Hd a FULL HD ********************** */
+
+@media (min-width: 100rem) {
+    /* 1600px */
+}
+
+@media (min-width: 100rem) and (min-height: 49.375rem) {
+    /* 1600px, 790px */
+}
+
+@media (min-width: 100rem) and (min-height: 56.25rem) {
+    /* 1600px, 900px */
+}
+
+@media (min-width: 112.5rem) {
+    /* 1800px */
+}
+
+@media (min-width: 112.5rem) and (min-height: 56.25rem) {
+    /* 1800px, 900px */
+}

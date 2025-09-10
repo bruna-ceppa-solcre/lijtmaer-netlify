@@ -1,0 +1,36 @@
+/* ******************************************** */
+/** OBJECTS: SECTION
+/* ******************************************** */
+
+/* SECTION */
+
+:root{
+    --section-y: 3.5rem;
+}
+
+.o-section{
+    padding-top: var(--section-y);
+    padding-bottom: var(--section-y);
+}
+.o-section-t{
+    padding-top: var(--section-y);
+}
+.o-section-b{
+    padding-bottom: var(--section-y);
+}
+
+
+/* ********************** desde DESKTOP ********************** */
+
+@media (min-width: 61.25rem) /* 980px */ {
+
+    :root{
+        --section-y: clamp(4rem,6.25vh,5.6rem);
+    }
+
+    :root .o-section--xs{
+        --section-y: clamp(2rem,4vh,3.2rem);
+    }
+
+
+}
